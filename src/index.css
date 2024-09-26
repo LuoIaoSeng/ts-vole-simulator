@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply p-0 m-0 font-mono
+}
+
+html, body {
+    @apply p-0 m-0 w-full h-full
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    @apply bg-slate-100
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-slate-300
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500
+}
