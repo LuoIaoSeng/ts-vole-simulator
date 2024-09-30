@@ -16,8 +16,8 @@ export default class VoleRuntime {
     execute = () => {
         //@ts-ignore
         while (this.flag !== Flags.HALT) {
-            if(this.flag === Flags.JUMP) {
-                this.print(`Jump to ${this.counter.toString(16)}\n`)
+            if (this.flag === Flags.JUMP) {
+                this.print(`Jump to 0x${this.counter.toString(16)}\n`)
             }
             this.readInstrcution()
             this.encodeInstruction()
@@ -31,35 +31,35 @@ export default class VoleRuntime {
     private printInstruction = (opCode: number, operand1: number, operand2: number, operand3: number) => {
         switch (opCode) {
             case 0x01:
-                this.print(`Load register 0x${operand1 < 0x10 ? '0' : ''}${operand1} with memory cell 0x${operand2}${operand3}`)
+                this.print(`Load register 0x${operand1.toString(16)} with memory cell 0x${operand2.toString(16)}${operand3.toString(16)}`)
                 break
             case 0x02:
-                this.print(`Load register 0x${operand1 < 0x10 ? '0' : ''}${operand1} with 0x${operand2}${operand3}`)
+                this.print(`Load register 0x${operand1.toString(16)} with 0x${operand2.toString(16)}${operand3.toString(16)}`)
                 break
             case 0x03:
-                this.print(`Store register 0x${operand1 < 0x10 ? '0' : ''}${operand1} in memory cell 0x${operand2}${operand3}`)
+                this.print(`Store register 0x${operand1.toString(16)} in memory cell 0x${operand2.toString(16)}${operand3.toString(16)}`)
                 break
             case 0x04:
-                this.print(`Move register 0x${operand2 < 0x10 ? '0' : ''}${operand2} to register 0x${operand3 < 0x10 ? '0' : ''}${operand3}`)
+                this.print(`Move register 0x${operand2.toString(16)} to register 0x${operand3.toString(16)}`)
                 break
             case 0x05:
             case 0x06:
-                this.print(`Register 0x${operand1 < 0x10 ? '0' : ''}${operand1} equals to register 0x${operand2 < 0x10 ? '0' : ''}${operand2} add register 0x${operand3 < 0x10 ? '0' : ''}${operand3}`)
+                this.print(`Register 0x${operand1.toString(16)} equals to register 0x${operand2.toString(16)} add register 0x${operand3.toString(16)}`)
                 break
             case 0x07:
-                this.print(`Register 0x${operand1 < 0x10 ? '0' : ''}${operand1} equals to register 0x${operand2 < 0x10 ? '0' : ''}${operand2} or register 0x${operand3 < 0x10 ? '0' : ''}${operand3}`)
+                this.print(`Register 0x${operand1.toString(16)} equals to register 0x${operand2.toString(16)} or register 0x${operand3.toString(16)}`)
                 break
             case 0x08:
-                this.print(`Register 0x${operand1 < 0x10 ? '0' : ''}${operand1} equals to register 0x${operand2 < 0x10 ? '0' : ''}${operand2} and register 0x${operand3 < 0x10 ? '0' : ''}${operand3}`)
+                this.print(`Register 0x${operand1.toString(16)} equals to register 0x${operand2.toString(16)} and register 0x${operand3.toString(16)}`)
                 break
             case 0x09:
-                this.print(`Register 0x${operand1 < 0x10 ? '0' : ''}${operand1} equals to register 0x${operand2 < 0x10 ? '0' : ''}${operand2} xor register 0x${operand3 < 0x10 ? '0' : ''}${operand3}`)
+                this.print(`Register 0x${operand1.toString(16)} equals to register 0x${operand2.toString(16)} xor register 0x${operand3.toString(16)}`)
                 break
             case 0x0a:
-                this.print(`Rotate register 0x${operand1 < 0x10 ? '0' : ''}${operand1} one bit to the right ${operand3} times`)
+                this.print(`Rotate register 0x${operand1.toString(16)} one bit to the right ${operand3.toString(16)} times`)
                 break
             case 0x0b:
-                this.print(`If register 0x00 equals to register 0x${operand1 < 0x10 ? '0' : ''}${operand1} then Jump to memory cell ${operand2}${operand3}`)
+                this.print(`If register 0x00 equals to register 0x${operand1.toString(16)} then Jump to memory cell 0x${operand2.toString(16)}${operand3.toString(16)}`)
                 break
             case 0x0c:
                 this.print(`HALT`)
