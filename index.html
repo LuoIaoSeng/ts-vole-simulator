@@ -6,12 +6,14 @@
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <link rel="stylesheet" href="/src/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="vole, simulator">
+    <meta name="description" content="A website run vole machine language">
     <title>Vole Language Simulator</title>
 </head>
 
 <body>
-    <div id="app" class="w-full bg-slate-100">
-        <div class="w-full px-16 py-4 shadow-sm flex justify-between bg-slate-50">
+    <div id="app" class="w-full bg-slate-100 pb-10">
+        <div class="w-full px-4 md:px-16 py-4 shadow-sm flex justify-between bg-slate-50">
             <a href="/"><img class="w-12" src="/icon.svg" alt=""></a>
             <div class="flex items-center gap-8">
                 <a href="/playground/" class="text-2xl">Playground</a>
@@ -20,10 +22,10 @@
                 </a>
             </div>
         </div>
-        <div class="w-full flex justify-center py-8">
-            <img class="w-1/3" src="/logo.svg" alt="">
+        <div class="w-full flex justify-center items-center py-8">
+            <img class="md:w-1/3 w-52" src="/logo.svg" alt="">
         </div>
-        <div class="w-full px-16 py-4 flex flex-col gap-4">
+        <div class="w-full box-border px-4 md:px-16 py-4 flex flex-col gap-4">
             <div class="text-4xl">What is Vole?</div>
             <div>
                 Vole is an encoded language. The instructions are encoded by using total 16-bits that is also
@@ -31,27 +33,32 @@
                 of the register. First 4 bits are called the op-code and operation field has last 12 bits.
             </div>
             <div>
-                You can find the list of op-code meaning at <a class="underline" target="_blank" href="https://ummoodle.um.edu.mo/pluginfile.php/6491655/mod_resource/content/2/CISC1004AppC.pdf">here</a>.
+                You can find the list of op-code meaning at <a class="underline" target="_blank"
+                    href="https://ummoodle.um.edu.mo/pluginfile.php/6491655/mod_resource/content/2/CISC1004AppC.pdf">here</a>.
             </div>
         </div>
-        <div class="w-full px-16 py-4 flex flex-col gap-4">
+        <div class="w-full px-4 md:px-16 py-4 flex flex-col gap-4">
             <div class="text-4xl">Why did I make this website?</div>
             <div>
-                Vole is hard to read and analyse. Serveral universities opt this language to explain the execution process
-                of machine language and give students practices. Each questions are time-consuming to figure out the answers. Therefore
+                Vole is hard to read and analyse. Serveral universities opt this language to explain the execution
+                process
+                of machine language and give students practices. Each questions are time-consuming to figure out the
+                answers. Therefore
                 I made this website to provide convenience.
             </div>
         </div>
-        <div class="w-full px-16 py-4 flex flex-col gap-4">
+        <div class="w-full px-4 md:px-16 py-4 flex flex-col gap-4">
             <div class="text-4xl">How to use the simulator?</div>
             <div>
-                You can check the README file in the github <a class="underline" href="https://github.com/LuoIaoSeng/ts-vole-simulator" target="_blank">link</a>.
+                You can check the README file in the github <a class="underline"
+                    href="https://github.com/LuoIaoSeng/ts-vole-simulator" target="_blank">link</a>.
             </div>
         </div>
-        <div class="w-full px-16 py-4 flex flex-col gap-4">
+        <div class="w-full px-4 md:px-16 py-4 flex flex-col gap-4">
             <div class="text-4xl">Welcome any PR!</div>
             <div>
-                Welcome any issues and pull request if you have questions or you think there will be better for the codes.
+                Welcome any issues and pull request if you have questions or you think there will be better for the
+                codes.
             </div>
         </div>
     </div>

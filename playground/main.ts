@@ -11,7 +11,7 @@ let runtime = new VoleRuntime(consoleListElement)
 
 for (let i = 0; i < 16; i++) {
     let tempElement = document.createElement('div')
-    tempElement.className = "w-full flex p-4 justify-between px-16"
+    tempElement.className = "w-full flex p-4 justify-between md:px-16"
     tempElement.setAttribute("data-id", `register-address-${i}`)
     tempElement.innerHTML = `
         <div>Address: 0x0${i.toString(16).toUpperCase()}</div>
@@ -22,7 +22,7 @@ for (let i = 0; i < 16; i++) {
 
 for (let i = 0; i < 256; i++) {
     let tempElement = document.createElement('div')
-    tempElement.className = "w-full flex p-4 justify-between px-16"
+    tempElement.className = "w-full flex p-4 justify-between md:px-16"
     tempElement.setAttribute("data-id", `memory-address-${i}`)
     tempElement.innerHTML = `
         <div>Address: 0x${i < 0x10 ? '0' : ''}${i.toString(16).toUpperCase()}</div>
